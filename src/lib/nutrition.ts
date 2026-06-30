@@ -6,7 +6,7 @@ export function generateNutritionPlan(weightKg: number, trainingHours: number): 
   const activityMultiplier = trainingHours > 10 ? 1.9 : trainingHours > 7 ? 1.75 : 1.6
   const totalCalories = Math.round(bmr * activityMultiplier)
 
-  const protein = Math.round(weightKg * 1.8) // 1.8g/kg para triatleta con fuerza
+  const protein = Math.round(weightKg * 2.0) // 2g/kg: mantener músculo y definición (fibrado + fuerte)
   const fat = Math.round((totalCalories * 0.25) / 9)
   const carbs = Math.round((totalCalories - protein * 4 - fat * 9) / 4)
 

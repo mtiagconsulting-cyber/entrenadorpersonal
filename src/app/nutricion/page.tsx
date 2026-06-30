@@ -36,7 +36,7 @@ function MealCard({ meal }: { meal: Meal }) {
 }
 
 export default function Nutricion() {
-  const [weight, setWeight] = useState(75)
+  const [weight, setWeight] = useState(67)
   const [hours, setHours] = useState(8.5)
   const plan = generateNutritionPlan(weight, hours)
 

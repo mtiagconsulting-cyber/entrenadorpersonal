@@ -70,6 +70,12 @@ export default function Entrenamiento() {
         <div>
           <h1 className="text-3xl font-black text-white">Plan de Entrenamiento</h1>
           <p className="text-gray-400 mt-1">24 semanas periodizadas · {weeksToRace} semanas hasta el race</p>
+          <div className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold" style={{ background: '#0d1b35', border: '1px solid #1e3a5f', color: '#60a5fa' }}>
+            🎯 Objetivo: terminar el 70.3 Málaga por debajo de 5h
+          </div>
+          <p className="text-gray-500 text-xs mt-2 max-w-xl">
+            Ritmos orientativos para sub-5h: natación ~36-40 min (1:50/100m) · bici 2:30-2:40 (~33-35 km/h) · carrera 1:45-1:50 (~5:00-5:15/km). Con transiciones, margen para sub-5h.
+          </p>
         </div>
 
         <div className="grid grid-cols-4 gap-4">
