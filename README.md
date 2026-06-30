@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏊‍♂️🚴‍♂️🏃‍♂️ Entrenador Personal · Ironman 70.3 Málaga 2026
 
-## Getting Started
+App de entrenamiento, fuerza y nutrición para preparar el **Ironman 70.3 Málaga** y ganar fuerza muscular. Construida con Next.js + TypeScript.
 
-First, run the development server:
+## Funcionalidades
+
+- **Dashboard** con tu estado actual y actividades recientes (datos reales desde **Garmin Connect**).
+- **Plan de entrenamiento** de 24 semanas periodizado (Base → Construcción → Pico → Tapering).
+- **Programa de fuerza** muscular adaptado a triatlón por fases.
+- **Plan de nutrición**: calorías, macros, comidas, suplementación y nutrición de carrera.
+
+## Puesta en marcha
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+El plan, la fuerza y la nutrición funcionan sin configurar nada. El dashboard muestra datos de ejemplo hasta que conectes Garmin.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Conectar Garmin Connect
 
-## Learn More
+Garmin no ofrece una API pública para uso personal, así que la app usa la
+librería [`garmin-connect`](https://www.npmjs.com/package/garmin-connect) con
+tus credenciales, leídas **solo en local** desde `.env.local`:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+cp .env.local.example .env.local
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Edita `.env.local` con:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+GARMIN_EMAIL=tu-email@ejemplo.com
+GARMIN_PASSWORD=tu-contraseña-de-garmin
+```
 
-## Deploy on Vercel
+Reinicia (`npm run dev`) y pulsa **Conectar Garmin** en el dashboard.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> 🔒 `.env.local` está en `.gitignore`: tus credenciales nunca se suben a GitHub.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> ℹ️ La librería de Garmin no es oficial (ingeniería inversa de Garmin Connect).
+> Si Garmin tiene la verificación en dos pasos (2FA) activada, el login puede
+> fallar; en ese caso, la alternativa más estable es sincronizar Garmin → Strava.
+
+## Despliegue
+
+Lista para desplegar en [Vercel](https://vercel.com/new). Recuerda configurar
+`GARMIN_EMAIL` y `GARMIN_PASSWORD` como variables de entorno en el proyecto.
