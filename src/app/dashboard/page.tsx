@@ -191,20 +191,20 @@ export default function Dashboard() {
         <div className="rounded-2xl p-6" style={{ background: '#0d1b35', border: '1px solid #1e3a5f' }}>
           <h2 className="text-white font-bold text-lg mb-4">Próximos pasos recomendados</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Link href="/entrenamiento" className="p-4 rounded-xl text-left hover:opacity-80 transition-opacity" style={{ background: '#111827', border: '1px solid #1f2937' }}>
+            <Link href="/calendario" className="p-4 rounded-xl text-left hover:opacity-80 transition-opacity" style={{ background: '#111827', border: '1px solid #1f2937' }}>
               <div className="text-2xl mb-2">📅</div>
-              <div className="text-white font-medium">Ver plan de 24 semanas</div>
-              <div className="text-gray-400 text-sm mt-1">Plan periodizado hasta el race de Málaga</div>
+              <div className="text-white font-medium">Calendario de planificación</div>
+              <div className="text-gray-400 text-sm mt-1">Tu plan periodizado día a día hasta Málaga</div>
             </Link>
-            <Link href="/fuerza" className="p-4 rounded-xl text-left hover:opacity-80 transition-opacity" style={{ background: '#111827', border: '1px solid #1f2937' }}>
-              <div className="text-2xl mb-2">💪</div>
-              <div className="text-white font-medium">Programa de fuerza</div>
-              <div className="text-gray-400 text-sm mt-1">2 sesiones/semana para mejorar potencia y prevenir lesiones</div>
-            </Link>
-            <Link href="/nutricion" className="p-4 rounded-xl text-left hover:opacity-80 transition-opacity" style={{ background: '#111827', border: '1px solid #1f2937' }}>
+            <Link href="/dietas" className="p-4 rounded-xl text-left hover:opacity-80 transition-opacity" style={{ background: '#111827', border: '1px solid #1f2937' }}>
               <div className="text-2xl mb-2">🥗</div>
-              <div className="text-white font-medium">Plan nutricional</div>
-              <div className="text-gray-400 text-sm mt-1">Alimentación, suplementación y nutrición de carrera</div>
+              <div className="text-white font-medium">Calendario de dietas</div>
+              <div className="text-gray-400 text-sm mt-1">Nutrición adaptada a la carga de cada día</div>
+            </Link>
+            <Link href="/progreso" className="p-4 rounded-xl text-left hover:opacity-80 transition-opacity" style={{ background: '#111827', border: '1px solid #1f2937' }}>
+              <div className="text-2xl mb-2">📈</div>
+              <div className="text-white font-medium">Seguimiento de mejora</div>
+              <div className="text-gray-400 text-sm mt-1">Peso, volumen y evolución hacia el sub-5h</div>
             </Link>
           </div>
         </div>
